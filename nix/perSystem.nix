@@ -1,3 +1,3 @@
 { pkgs, ... }:
 
-pkgs.hello
+{ packages.default = pkgs.hello; }

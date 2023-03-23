@@ -6,7 +6,7 @@
     flake-parts = {
       type = "indirect";
       id = "flake-parts";
-      nixpkgs-lib.follows = "nixpkgs";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
   };
