@@ -1,3 +1,11 @@
 { pkgs, ... }:
+let
+  helloIsBashOverlay = super: prev: {
+    hello = prev.bash;
+  };
 
-{ packages.default = pkgs.hello; }
+in
+{
+  nixpkgs.overlays = [ helloIsBashOverlay ];
+  packages.default = pkgs.hello;
+}

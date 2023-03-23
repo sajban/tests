@@ -18,12 +18,13 @@
 
         imports = [
           nixpkgs.flakeModules.default
+          ./nix/flakeModule.nix
         ];
 
         perSystem = import ./nix/perSystem.nix;
 
         flake = {
-          flakeModules.default = ./nix/flake-module.nix;
+          flakeModules.default = ./nix/flakeModule.nix;
         };
       };
 }
